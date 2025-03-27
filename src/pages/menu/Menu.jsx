@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
-import { 
-  Box, 
-  Container, 
-  Typography, 
-  Tabs, 
-  Tab, 
-  Grid, 
+import React, { useState, useEffect } from "react";
+import {
+  Box,
+  Container,
+  Typography,
+  Tabs,
+  Tab,
+  Grid,
   useMediaQuery,
   Badge,
   IconButton,
@@ -22,102 +22,270 @@ import {
   TextField,
   Paper,
   FormControlLabel,
-  Checkbox
-} from '@mui/material';
-import { motion } from 'framer-motion';
-import { 
-  LocalCafe, 
-  Fastfood, 
+  Checkbox,
+} from "@mui/material";
+import { motion } from "framer-motion";
+import {
+  LocalCafe,
+  Fastfood,
   Restaurant,
   ShoppingCart,
   Close,
   Delete,
   CreditCard,
   LocalShipping,
-  Receipt
-} from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
+  Receipt,
+} from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
-const steps = ['Shipping', 'Payment', 'Review'];
+const steps = ["Shipping", "Payment", "Review"];
 
 export const FoodMenu = () => {
   const menuCategories = [
     {
-      id: 'breakfast',
-      label: 'Breakfast',
+      id: "breakfast",
+      label: "Breakfast",
       icon: <LocalCafe fontSize="large" />,
-      subtitle: 'Popular',
+      subtitle: "Popular",
       items: [
-        { id: 1, name: 'Chicken Burger', price: 115, description: 'Ipsum ipsum clita erat amet dolor justo diam', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80' },
-        { id: 2, name: 'Vegetarian Breakfast', price: 95, description: 'Healthy morning delight with fresh ingredients', image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80' },
-        { id: 3, name: 'Pancake Stack', price: 85, description: 'Fluffy pancakes with maple syrup', image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1380&q=80' },
-        { id: 4, name: 'Avocado Toast', price: 75, description: 'Sourdough bread with fresh avocado', image: 'https://images.unsplash.com/photo-1515446134809-993c501ca304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
-        { id: 5, name: 'Eggs Benedict', price: 105, description: 'Classic breakfast with hollandaise sauce', image: 'https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80' },
-        { id: 6, name: 'French Toast', price: 90, description: 'Caramelized brioche with berries', image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1494&q=80' },
-        { id: 7, name: 'Smoothie Bowl', price: 80, description: 'Fresh fruits and granola', image: 'https://images.unsplash.com/photo-1505252585461-04db1a846cca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
-        { id: 8, name: 'Breakfast Burrito', price: 110, description: 'Hearty wrap with eggs and sausage', image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80' }
-      ]
+        {
+          id: 1,
+          name: "Chicken Burger",
+          price: 115,
+          description: "Ipsum ipsum clita erat amet dolor justo diam",
+          image:
+            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80",
+        },
+        {
+          id: 2,
+          name: "Vegetarian Breakfast",
+          price: 95,
+          description: "Healthy morning delight with fresh ingredients",
+          image:
+            "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80",
+        },
+        {
+          id: 3,
+          name: "Pancake Stack",
+          price: 85,
+          description: "Fluffy pancakes with maple syrup",
+          image:
+            "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1380&q=80",
+        },
+        {
+          id: 4,
+          name: "Avocado Toast",
+          price: 75,
+          description: "Sourdough bread with fresh avocado",
+          image:
+            "https://images.unsplash.com/photo-1515446134809-993c501ca304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+        {
+          id: 5,
+          name: "Eggs Benedict",
+          price: 105,
+          description: "Classic breakfast with hollandaise sauce",
+          image:
+            "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80",
+        },
+        {
+          id: 6,
+          name: "French Toast",
+          price: 90,
+          description: "Caramelized brioche with berries",
+          image:
+            "https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1494&q=80",
+        },
+        {
+          id: 7,
+          name: "Smoothie Bowl",
+          price: 80,
+          description: "Fresh fruits and granola",
+          image:
+            "https://images.unsplash.com/photo-1505252585461-04db1a846cca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+        {
+          id: 8,
+          name: "Breakfast Burrito",
+          price: 110,
+          description: "Hearty wrap with eggs and sausage",
+          image:
+            "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+        },
+      ],
     },
     {
-      id: 'lunch',
-      label: 'Lunch',
+      id: "lunch",
+      label: "Lunch",
       icon: <Fastfood fontSize="large" />,
-      subtitle: 'Special',
+      subtitle: "Special",
       items: [
-        { id: 1, name: 'Chicken Burger', price: 115, description: 'Ipsum ipsum clita erat amet dolor justo diam', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80' },
-        { id: 2, name: 'Caesar Salad', price: 95, description: 'Crispy romaine with parmesan', image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80' },
-        { id: 3, name: 'Margherita Pizza', price: 125, description: 'Classic tomato and mozzarella', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80' },
-        { id: 4, name: 'Beef Tacos', price: 105, description: 'Three soft tacos with salsa', image: 'https://images.unsplash.com/photo-1565299585323-38f6e5f38773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1422&q=80' },
-        { id: 5, name: 'Club Sandwich', price: 110, description: 'Triple decker with turkey and bacon', image: 'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80' },
-        { id: 6, name: 'Pasta Carbonara', price: 120, description: 'Creamy sauce with pancetta', image: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
-        { id: 7, name: 'Beef Burger', price: 130, description: 'Angus beef with cheese', image: 'https://images.unsplash.com/photo-1561758033-48d52648ae8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80' },
-        { id: 8, name: 'Grilled Salmon', price: 145, description: 'With lemon butter sauce', image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' }
-      ]
+        {
+          id: 1,
+          name: "Chicken Burger",
+          price: 115,
+          description: "Ipsum ipsum clita erat amet dolor justo diam",
+          image:
+            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80",
+        },
+        {
+          id: 2,
+          name: "Caesar Salad",
+          price: 95,
+          description: "Crispy romaine with parmesan",
+          image:
+            "https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+        },
+        {
+          id: 3,
+          name: "Margherita Pizza",
+          price: 125,
+          description: "Classic tomato and mozzarella",
+          image:
+            "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80",
+        },
+        {
+          id: 4,
+          name: "Beef Tacos",
+          price: 105,
+          description: "Three soft tacos with salsa",
+          image:
+            "https://images.unsplash.com/photo-1565299585323-38f6e5f38773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1422&q=80",
+        },
+        {
+          id: 5,
+          name: "Club Sandwich",
+          price: 110,
+          description: "Triple decker with turkey and bacon",
+          image:
+            "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+        },
+        {
+          id: 6,
+          name: "Pasta Carbonara",
+          price: 120,
+          description: "Creamy sauce with pancetta",
+          image:
+            "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+        {
+          id: 7,
+          name: "Beef Burger",
+          price: 130,
+          description: "Angus beef with cheese",
+          image:
+            "https://images.unsplash.com/photo-1561758033-48d52648ae8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+        },
+        {
+          id: 8,
+          name: "Grilled Salmon",
+          price: 145,
+          description: "With lemon butter sauce",
+          image:
+            "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+      ],
     },
     {
-      id: 'dinner',
-      label: 'Dinner',
+      id: "dinner",
+      label: "Dinner",
       icon: <Restaurant fontSize="large" />,
-      subtitle: 'Lovely',
+      subtitle: "Lovely",
       items: [
-        { id: 1, name: 'Chicken Burger', price: 115, description: 'Ipsum ipsum clita erat amet dolor justo diam', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80' },
-        { id: 2, name: 'Filet Mignon', price: 195, description: '8oz tender beef cut', image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
-        { id: 3, name: 'Lobster Risotto', price: 175, description: 'Creamy arborio rice with lobster', image: 'https://images.unsplash.com/photo-1600628421060-939639517883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
-        { id: 4, name: 'Duck Confit', price: 165, description: 'Slow cooked duck leg', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
-        { id: 5, name: 'Mushroom Ravioli', price: 135, description: 'Homemade pasta with truffle', image: 'https://images.unsplash.com/photo-1608212589631-1236b6287dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
-        { id: 6, name: 'Rack of Lamb', price: 185, description: 'Herb crusted with mint jelly', image: 'https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1526&q=80' },
-        { id: 7, name: 'Seafood Paella', price: 155, description: 'Spanish rice with mixed seafood', image: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
-        { id: 8, name: 'Vegetable Curry', price: 125, description: 'Spicy coconut milk curry', image: 'https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' }
-      ]
-    }
+        {
+          id: 1,
+          name: "Chicken Burger",
+          price: 115,
+          description: "Ipsum ipsum clita erat amet dolor justo diam",
+          image:
+            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80",
+        },
+        {
+          id: 2,
+          name: "Filet Mignon",
+          price: 195,
+          description: "8oz tender beef cut",
+          image:
+            "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+        {
+          id: 3,
+          name: "Lobster Risotto",
+          price: 175,
+          description: "Creamy arborio rice with lobster",
+          image:
+            "https://images.unsplash.com/photo-1600628421060-939639517883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+        {
+          id: 4,
+          name: "Duck Confit",
+          price: 165,
+          description: "Slow cooked duck leg",
+          image:
+            "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+        {
+          id: 5,
+          name: "Mushroom Ravioli",
+          price: 135,
+          description: "Homemade pasta with truffle",
+          image:
+            "https://images.unsplash.com/photo-1608212589631-1236b6287dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+        {
+          id: 6,
+          name: "Rack of Lamb",
+          price: 185,
+          description: "Herb crusted with mint jelly",
+          image:
+            "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1526&q=80",
+        },
+        {
+          id: 7,
+          name: "Seafood Paella",
+          price: 155,
+          description: "Spanish rice with mixed seafood",
+          image:
+            "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+        {
+          id: 8,
+          name: "Vegetable Curry",
+          price: 125,
+          description: "Spicy coconut milk curry",
+          image:
+            "https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        },
+      ],
+    },
   ];
-  const [activeComponent, setActiveComponent] = useState('menu'); // 'menu' or 'checkout'
+  const [activeComponent, setActiveComponent] = useState("menu"); // 'menu' or 'checkout'
   const [activeStep, setActiveStep] = useState(0);
   const [value, setValue] = useState(0);
   const [cart, setCart] = useState([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [shippingData, setShippingData] = useState({
-    firstName: '',
-    lastName: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: '',
-    country: ''
+    firstName: "",
+    lastName: "",
+    address: "",
+    city: "",
+    state: "",
+    zip: "",
+    country: "",
   });
   const [paymentData, setPaymentData] = useState({
-    cardName: '',
-    cardNumber: '',
-    expiryDate: '',
-    cvv: ''
+    cardName: "",
+    cardNumber: "",
+    expiryDate: "",
+    cvv: "",
   });
   const [agreeTerms, setAgreeTerms] = useState(false);
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery("(max-width:600px)");
   const navigate = useNavigate();
 
   // Load cart from localStorage on component mount
   useEffect(() => {
-    const savedCart = localStorage.getItem('restaurantCart');
+    const savedCart = localStorage.getItem("restaurantCart");
     if (savedCart) {
       setCart(JSON.parse(savedCart));
     }
@@ -125,7 +293,7 @@ export const FoodMenu = () => {
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('restaurantCart', JSON.stringify(cart));
+    localStorage.setItem("restaurantCart", JSON.stringify(cart));
   }, [cart]);
 
   const handleChange = (event, newValue) => {
@@ -133,11 +301,11 @@ export const FoodMenu = () => {
   };
 
   const addToOrder = (item) => {
-    setCart(prevCart => {
-      const existingItem = prevCart.find(cartItem => cartItem.id === item.id);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
       if (existingItem) {
-        return prevCart.map(cartItem =>
-          cartItem.id === item.id 
+        return prevCart.map((cartItem) =>
+          cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
             : cartItem
         );
@@ -148,7 +316,7 @@ export const FoodMenu = () => {
   };
 
   const removeFromOrder = (itemId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== itemId));
+    setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
   };
 
   const updateQuantity = (itemId, newQuantity) => {
@@ -156,34 +324,39 @@ export const FoodMenu = () => {
       removeFromOrder(itemId);
       return;
     }
-    setCart(prevCart =>
-      prevCart.map(item =>
+    setCart((prevCart) =>
+      prevCart.map((item) =>
         item.id === itemId ? { ...item, quantity: newQuantity } : item
       )
     );
   };
 
   const calculateTotal = () => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
-  const handleNext = () => setActiveStep(prev => prev + 1);
-  const handleBack = () => setActiveStep(prev => prev - 1);
+  const handleNext = () => setActiveStep((prev) => prev + 1);
+  const handleBack = () => setActiveStep((prev) => prev - 1);
 
   const handleShippingChange = (e) => {
     const { name, value } = e.target;
-    setShippingData(prev => ({ ...prev, [name]: value }));
+    setShippingData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handlePaymentChange = (e) => {
     const { name, value } = e.target;
-    setPaymentData(prev => ({ ...prev, [name]: value }));
+    setPaymentData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Process payment here (would connect to your payment gateway)
-    console.log('Order submitted:', { shippingData, paymentData, cart, total: calculateTotal() });
+    console.log("Order submitted:", {
+      shippingData,
+      paymentData,
+      cart,
+      total: calculateTotal(),
+    });
     handleNext();
   };
 
@@ -191,7 +364,7 @@ export const FoodMenu = () => {
     switch (step) {
       case 0:
         return (
-          <form className='bg-amber-50 p-6'>
+          <form className="bg-amber-50 p-6">
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -268,7 +441,7 @@ export const FoodMenu = () => {
         );
       case 1:
         return (
-          <form className='bg-amber-50'>
+          <form className="bg-amber-50">
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
@@ -330,7 +503,7 @@ export const FoodMenu = () => {
         );
       case 2:
         return (
-          <Box className='bg-amber-50'>
+          <Box className="bg-amber-50">
             <Typography variant="h6" gutterBottom>
               Order Summary
             </Typography>
@@ -346,19 +519,31 @@ export const FoodMenu = () => {
               <Divider />
               <ListItem>
                 <ListItemText primary="Subtotal" />
-                <Typography variant="subtitle1">${calculateTotal().toFixed(2)}</Typography>
+                <Typography variant="subtitle1">
+                  ${calculateTotal().toFixed(2)}
+                </Typography>
               </ListItem>
               <ListItem>
                 <ListItemText primary="Shipping" />
-                <Typography variant="subtitle1">$0.00</Typography>
+                <Typography variant="subtitle1">${(calculateTotal()/100)}</Typography>
               </ListItem>
               <ListItem>
                 <ListItemText primary="Total" />
-                <Typography variant="h6">${calculateTotal().toFixed(2)}</Typography>
+                <Typography variant="h6">
+                  ${(calculateTotal()+(calculateTotal()/100)).toFixed(2)}
+                </Typography>
               </ListItem>
             </List>
             <Typography variant="body2" color="textSecondary" mt={2}>
-              Shipping to: {shippingData.address}, {shippingData.city}, {shippingData.state} {shippingData.zip}, {shippingData.country}
+              <span className="text-gray-950"> Shipping to:</span>{" "}
+              <b className="text-blue-400 font-bold">
+                {shippingData.firstName}
+                {shippingData.lastName}
+              </b>
+              <br />
+              at <b className="text-amber-300">{shippingData.address}</b>,{" "}
+              {shippingData.city},<br />
+              {shippingData.state}- zipcode: {shippingData.zip}, {shippingData.country}
             </Typography>
             <Typography variant="body2" color="textSecondary" mt={1}>
               Payment method: **** **** **** {paymentData.cardNumber.slice(-4)}
@@ -366,15 +551,16 @@ export const FoodMenu = () => {
           </Box>
         );
       default:
-        throw new Error('Unknown step');
+        throw new Error("Unknown step");
     }
   };
 
-
-
-  if (activeComponent === 'checkout') {
+  if (activeComponent === "checkout") {
     return (
-      <Box className='bg-white py-8 px-3 rounded-2xl' sx={{ maxWidth: 800, mx: 'auto', my: 4 }}>
+      <Box
+        className="bg-white py-8 px-3 rounded-2xl"
+        sx={{ maxWidth: 800, mx: "auto", my: 4 }}
+      >
         <Stepper activeStep={activeStep} sx={{ mb: 4 }}>
           {steps.map((label) => (
             <Step key={label}>
@@ -391,13 +577,14 @@ export const FoodMenu = () => {
                   Thank you for your order!
                 </Typography>
                 <Typography variant="body1">
-                  Your order number is #2001539. We have emailed your order confirmation.
+                  Your order number is {(Math.random()*1000000).toFixed(7)}. We have emailed your order
+                  confirmation.
                 </Typography>
-                <Button 
-                  variant="contained" 
+                <Button
+                  variant="contained"
                   sx={{ mt: 3 }}
                   onClick={() => {
-                    setActiveComponent('menu');
+                    setActiveComponent("menu");
                     setActiveStep(0);
                     setCart([]);
                   }}
@@ -408,7 +595,9 @@ export const FoodMenu = () => {
             ) : (
               <Box>
                 {getStepContent(activeStep)}
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 3 }}>
+                <Box
+                  sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}
+                >
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} sx={{ mr: 1 }}>
                       Back
@@ -416,10 +605,14 @@ export const FoodMenu = () => {
                   )}
                   <Button
                     variant="contained"
-                    onClick={activeStep === steps.length - 1 ? handleSubmit : handleNext}
+                    onClick={
+                      activeStep === steps.length - 1
+                        ? handleSubmit
+                        : handleNext
+                    }
                     disabled={activeStep === 1 && !agreeTerms}
                   >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                    {activeStep === steps.length - 1 ? "Place order" : "Next"}
                   </Button>
                 </Box>
               </Box>
@@ -431,13 +624,15 @@ export const FoodMenu = () => {
                 Order Summary
               </Typography>
               <List>
-                {(cart || []).map(item => (
+                {(cart || []).map((item) => (
                   <ListItem key={item.id} sx={{ py: 1 }}>
                     <ListItemText
                       primary={`${item.name} x ${item.quantity}`}
                       secondary={`$${item.price} each`}
                     />
-                    <Typography>${(item.price * item.quantity).toFixed(2)}</Typography>
+                    <Typography>
+                      ${(item.price * item.quantity).toFixed(2)}
+                    </Typography>
                   </ListItem>
                 ))}
                 <Divider sx={{ my: 1 }} />
@@ -447,12 +642,14 @@ export const FoodMenu = () => {
                 </ListItem>
                 <ListItem sx={{ py: 1 }}>
                   <ListItemText primary="Shipping" />
-                  <Typography>$0.00</Typography>
+                  <Typography>${calculateTotal()/100}</Typography>
                 </ListItem>
                 <Divider sx={{ my: 1 }} />
                 <ListItem sx={{ py: 1 }}>
                   <ListItemText primary="Total" />
-                  <Typography variant="h6">${calculateTotal().toFixed(2)}</Typography>
+                  <Typography variant="h6">
+                    ${(calculateTotal()+(calculateTotal()/100)).toFixed(2)}
+                  </Typography>
                 </ListItem>
               </List>
             </Paper>
@@ -468,18 +665,21 @@ export const FoodMenu = () => {
       <IconButton
         onClick={() => setDrawerOpen(true)}
         sx={{
-          position: 'fixed',
+          position: "fixed",
           right: 0,
           top: 24,
           zIndex: 999,
-          backgroundColor: 'primary.main',
-          color: 'white',
-          '&:hover': {
-            backgroundColor: 'primary.dark'
-          }
+          backgroundColor: "primary.main",
+          color: "white",
+          "&:hover": {
+            backgroundColor: "primary.dark",
+          },
         }}
       >
-        <Badge badgeContent={cart.reduce((total, item) => total + item.quantity, 0)} color="error">
+        <Badge
+          badgeContent={cart.reduce((total, item) => total + item.quantity, 0)}
+          color="error"
+        >
           <ShoppingCart />
         </Badge>
       </IconButton>
@@ -491,12 +691,17 @@ export const FoodMenu = () => {
         onClose={() => setDrawerOpen(false)}
         PaperProps={{
           sx: {
-            width: isMobile ? '100%' : 400,
-            padding: 2
-          }
+            width: isMobile ? "100%" : 400,
+            padding: 2,
+          },
         }}
       >
-        <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          mb={2}
+        >
           <Typography variant="h5" fontWeight="bold">
             Your Order
           </Typography>
@@ -515,40 +720,50 @@ export const FoodMenu = () => {
           <>
             <List>
               {cart.map((item) => (
-                <ListItem key={item.id} secondaryAction={
-                  <IconButton edge="end" onClick={() => removeFromOrder(item.id)}>
-                    <Delete color="error" />
-                  </IconButton>
-                }>
+                <ListItem
+                  key={item.id}
+                  secondaryAction={
+                    <IconButton
+                      edge="end"
+                      onClick={() => removeFromOrder(item.id)}
+                    >
+                      <Delete color="error" />
+                    </IconButton>
+                  }
+                >
                   <Box display="flex" alignItems="center" width="100%">
-                    <img 
-                      src={item.image} 
-                      alt=''
-                      style={{ 
-                        width: 50, 
-                        height: 50, 
-                        objectFit: 'cover',
+                    <img
+                      src={item.image}
+                      alt=""
+                      style={{
+                        width: 50,
+                        height: 50,
+                        objectFit: "cover",
                         borderRadius: 8,
-                        marginRight: 16
-                      }} 
+                        marginRight: 16,
+                      }}
                     />
                     <Box flexGrow={1}>
-                      <ListItemText 
-                        primary={item.name} 
-                        secondary={`$${item.price} x ${item.quantity}`} 
+                      <ListItemText
+                        primary={item.name}
+                        secondary={`$${item.price} x ${item.quantity}`}
                       />
                     </Box>
                     <Box display="flex" alignItems="center">
-                      <IconButton 
-                        size="small" 
-                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                      <IconButton
+                        size="small"
+                        onClick={() =>
+                          updateQuantity(item.id, item.quantity - 1)
+                        }
                       >
                         -
                       </IconButton>
                       <Typography mx={1}>{item.quantity}</Typography>
-                      <IconButton 
-                        size="small" 
-                        onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                      <IconButton
+                        size="small"
+                        onClick={() =>
+                          updateQuantity(item.id, item.quantity + 1)
+                        }
                       >
                         +
                       </IconButton>
@@ -569,14 +784,14 @@ export const FoodMenu = () => {
               </Box>
             </Box>
 
-            <Button 
-              variant="contained" 
-              color="primary" 
+            <Button
+              variant="contained"
+              color="primary"
               fullWidth
               size="large"
               onClick={() => {
                 setDrawerOpen(false);
-                setActiveComponent('checkout');
+                setActiveComponent("checkout");
               }}
             >
               Proceed to Checkout
@@ -620,10 +835,10 @@ export const FoodMenu = () => {
             allowScrollButtonsMobile
             aria-label="food menu categories"
             sx={{
-              '& .MuiTabs-indicator': {
-                backgroundColor: 'primary.main',
-                height: 3
-              }
+              "& .MuiTabs-indicator": {
+                backgroundColor: "primary.main",
+                height: 3,
+              },
             }}
           >
             {menuCategories.map((category, index) => (
@@ -640,10 +855,16 @@ export const FoodMenu = () => {
                 }
                 label={
                   <Box className="text-left">
-                    <Typography variant="caption" className=" text-gray-100 block">
+                    <Typography
+                      variant="caption"
+                      className=" text-gray-100 block"
+                    >
                       {category.subtitle}
                     </Typography>
-                    <Typography variant="subtitle1" className="font-bold text-blue-300">
+                    <Typography
+                      variant="subtitle1"
+                      className="font-bold text-blue-300"
+                    >
                       {category.label}
                     </Typography>
                   </Box>
@@ -681,7 +902,7 @@ export const FoodMenu = () => {
                         >
                           <img
                             src={item.image}
-                            alt=''
+                            alt=""
                             className="w-full h-full object-cover"
                           />
                         </motion.div>
@@ -711,7 +932,7 @@ export const FoodMenu = () => {
                             whileTap={{ scale: 0.95 }}
                             className="mt-3 self-end"
                           >
-                            <button 
+                            <button
                               className="text-sm font-medium text-primary hover:text-primary-dark transition-colors"
                               onClick={() => addToOrder(item)}
                             >
