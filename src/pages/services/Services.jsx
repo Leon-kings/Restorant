@@ -82,6 +82,7 @@ export const Services = () => {
         "Equipment Maintenance",
       ],
     },
+
     {
       id: 3,
       title: "24/7 Services",
@@ -97,24 +98,6 @@ export const Services = () => {
         "Website automation",
         "Cost optimization",
       ],
-      
-    },
-    {
-      id: 4,
-      title: "24/7 Services",
-      shortDescription:
-        "Service that is available at any time and usually, every day.",
-      icon: <Headphones fontSize="large" />,
-      delay: 0.4,
-      fullDescription:
-        "24/7 service means a service is available around the clock, 24 hours a day, 7 days a week, providing continuous support and accessibility.",
-      features: [
-        "Kitchen Open",
-        "Reception Services",
-        "Website automation",
-        "Cost optimization",
-      ],
-      
     },
   ];
 
@@ -161,18 +144,12 @@ export const Services = () => {
         >
           <Grid
             container
-            spacing={4}
+            spacing={2}
+            className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-4"
             justifyContent="center"
           >
             {servicesData.map((service) => (
-              <Grid 
-                item 
-                key={service.id}
-                xs={12}    // 1 column on extra small screens
-                sm={6}     // 2 columns on small screens (sm:grid-cols-1 would actually be 1 column, but you said sm:grid-cols-1)
-                md={6}     // 2 columns on medium screens (md:grid-cols-2)
-                lg={3}     // 4 columns on large screens (lg:grid-cols-4)
-              >
+              <Grid item xs={16} lg={8} md={4} key={service.id}>
                 <motion.div
                   variants={cardVariants}
                   initial="hidden"
