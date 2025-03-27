@@ -26,6 +26,7 @@ import {
   Restaurant,
   Headphones,
   Person,
+  DeliveryDining,
 } from "@mui/icons-material";
 
 export const Services = () => {
@@ -63,7 +64,13 @@ export const Services = () => {
       delay: 0.1,
       fullDescription:
         "Member of a cooking team, responsible for planning menus, ordering food, supervising other cooks, and ensuring the quality of meals.",
-      features: ["Menu Planning", "Food Ordering", "Staff Supervision","Quality Control","Kitchen Management"],
+      features: [
+        "Menu Planning",
+        "Food Ordering",
+        "Staff Supervision",
+        "Quality Control",
+        "Kitchen Management",
+      ],
     },
     {
       id: 2,
@@ -97,24 +104,17 @@ export const Services = () => {
         "Website automation",
         "Cost optimization",
       ],
-      
     },
     {
       id: 4,
-      title: "24/7 Services",
+      title: "Delivery Food",
       shortDescription:
-        "Service that is available at any time and usually, every day.",
-      icon: <Headphones fontSize="large" />,
+        " LD offers a detailed and large list of delicious restaurants around you. ",
+      icon: <DeliveryDining className="size-6" fontSize="large" />,
       delay: 0.4,
       fullDescription:
-        "24/7 service means a service is available around the clock, 24 hours a day, 7 days a week, providing continuous support and accessibility.",
-      features: [
-        "Kitchen Open",
-        "Reception Services",
-        "Website automation",
-        "Cost optimization",
-      ],
-      
+        " Then you are at the right place! LD offers a detailed and large list of delicious restaurants around you. Whether it is a delicious Burger, Pizza, Chinese or any kind of food you are looking for, LD offers an extensive service of food delivered at your door step.",
+      features: ["Lunch Delivery", "Breakfast delivery", "Dinner Delivery"],
     },
   ];
 
@@ -159,19 +159,15 @@ export const Services = () => {
           viewport={{ once: true }}
           variants={containerVariants}
         >
-          <Grid
-            container
-            spacing={4}
-            justifyContent="center"
-          >
+          <Grid container spacing={4} justifyContent="center">
             {servicesData.map((service) => (
-              <Grid 
-                item 
+              <Grid
+                item
                 key={service.id}
-                xs={12}    // 1 column on extra small screens
-                sm={6}     // 2 columns on small screens (sm:grid-cols-1 would actually be 1 column, but you said sm:grid-cols-1)
-                md={6}     // 2 columns on medium screens (md:grid-cols-2)
-                lg={3}     // 4 columns on large screens (lg:grid-cols-4)
+                xs={12} // 1 column on extra small screens
+                sm={6} // 2 columns on small screens (sm:grid-cols-1 would actually be 1 column, but you said sm:grid-cols-1)
+                md={6} // 2 columns on medium screens (md:grid-cols-2)
+                lg={3} // 4 columns on large screens (lg:grid-cols-4)
               >
                 <motion.div
                   variants={cardVariants}
