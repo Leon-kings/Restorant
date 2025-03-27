@@ -52,7 +52,8 @@ export const FoodMenu = () => {
           id: 1,
           name: "Chicken Burger",
           price: 115,
-          description: "Ipsum ipsum clita erat amet dolor justo diam",
+          description:
+            "Chicken burger recipes · Sriracha-glazed chicken burger & pickled cabbage · Caesar brussels slaw & parmesan chicken schnitzel burgers.",
           image:
             "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80",
         },
@@ -60,7 +61,8 @@ export const FoodMenu = () => {
           id: 2,
           name: "Vegetarian Breakfast",
           price: 95,
-          description: "Healthy morning delight with fresh ingredients",
+          description:
+            "A collection of tasty vegetarian breakfast recipes. Loads of really straightforward and simple recipes with plenty of flavour!",
           image:
             "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80",
         },
@@ -68,7 +70,8 @@ export const FoodMenu = () => {
           id: 3,
           name: "Pancake Stack",
           price: 85,
-          description: "Fluffy pancakes with maple syrup",
+          description:
+            "Our world-famous buttermilk pancake stacks served with maple-flavoured syrup and your choice of whipped butter, cream, or vanilla ice cream.",
           image:
             "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1380&q=80",
         },
@@ -76,7 +79,8 @@ export const FoodMenu = () => {
           id: 4,
           name: "Avocado Toast",
           price: 75,
-          description: "Sourdough bread with fresh avocado",
+          description:
+            "This perfect avocado toast recipe is simple - all you need is good toasted bread, avocado, lemon juice, and salt! Plus, find 5 delicious variations.",
           image:
             "https://images.unsplash.com/photo-1515446134809-993c501ca304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         },
@@ -84,7 +88,8 @@ export const FoodMenu = () => {
           id: 5,
           name: "Eggs Benedict",
           price: 105,
-          description: "Classic breakfast with hollandaise sauce",
+          description:
+            "Eggs Benedict is a common American breakfast or brunch dish, consisting of two halves of an English muffin, each topped with Canadian bacon or sliced ham.",
           image:
             "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80",
         },
@@ -92,7 +97,8 @@ export const FoodMenu = () => {
           id: 6,
           name: "French Toast",
           price: 90,
-          description: "Caramelized brioche with berries",
+          description:
+            "Thick slices of bread, soaked in a mixture of beaten eggs with milk and cinnamon, toasted in a frying pan, and served with butter and maple syrup.",
           image:
             "https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1494&q=80",
         },
@@ -100,15 +106,17 @@ export const FoodMenu = () => {
           id: 7,
           name: "Smoothie Bowl",
           price: 80,
-          description: "Fresh fruits and granola",
+          description:
+            " A smoothie bowl is a smoothie eaten from a bowl instead of a cup. Smoothie bowls are more nutrient-dense, with toppings like granola, seeds, and dried fruit.",
           image:
-            "https://images.unsplash.com/photo-1505252585461-04db1a846cca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHeKD7oE-wB5Z4sj3Dd-T7n6EPlz5bROML-xSfISynap4pY-ou6BWQxClqgC2-0dDFnk0aAGlJLgZgy8-BY-h2Y5hx0Jd2bCp7Fz6ndA",
         },
         {
           id: 8,
           name: "Breakfast Burrito",
           price: 110,
-          description: "Hearty wrap with eggs and sausage",
+          description:
+            "Burrito, a common cylindrical food item of Mexican and American origin consisting of a tortilla wrapped around a mixed filling of such ingredients as meat, cheese, beans, and vegetables.",
           image:
             "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
         },
@@ -124,7 +132,8 @@ export const FoodMenu = () => {
           id: 1,
           name: "Chicken Burger",
           price: 115,
-          description: "Ipsum ipsum clita erat amet dolor justo diam",
+          description:
+            "Chicken burger recipes · Sriracha-glazed chicken burger & pickled cabbage · Caesar brussels slaw & parmesan chicken schnitzel burgers.",
           image:
             "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80",
         },
@@ -132,7 +141,8 @@ export const FoodMenu = () => {
           id: 2,
           name: "Caesar Salad",
           price: 95,
-          description: "Crispy romaine with parmesan",
+          description:
+            "A Caesar salad also known as Caesar's salad, is a green salad of romaine lettuce and croutons dressed with lemon juice (or lime juice), olive oil, eggs.",
           image:
             "https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
         },
@@ -140,7 +150,8 @@ export const FoodMenu = () => {
           id: 3,
           name: "Margherita Pizza",
           price: 125,
-          description: "Classic tomato and mozzarella",
+          description:
+            "Pizza Margherita, also known as Margherita pizza, is, together with the pizza marinara, the typical Neapolitan pizza. It is roundish in shape with a raised.",
           image:
             "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80",
         },
@@ -148,15 +159,17 @@ export const FoodMenu = () => {
           id: 4,
           name: "Beef Tacos",
           price: 105,
-          description: "Three soft tacos with salsa",
+          description:
+            "Make these vibrant beef tacos with a pack of mince. Go to the extra effort of making your own spice mix for even more flavour, and use soft tortillas.",
           image:
-            "https://images.unsplash.com/photo-1565299585323-38f6e5f38773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1422&q=80",
+            "https://funwithoutfodmaps.com/wp-content/uploads/2022/07/Low-FODMAP-Beef-Tacos-Square.jpg",
         },
         {
           id: 5,
           name: "Club Sandwich",
           price: 110,
-          description: "Triple decker with turkey and bacon",
+          description:
+            "A club sandwich or clubhouse sandwich, is a three-layer sandwich consisting of three slices of bread (traditionally toasted), sliced cooked poultry, fried bacon .",
           image:
             "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
         },
@@ -164,7 +177,8 @@ export const FoodMenu = () => {
           id: 6,
           name: "Pasta Carbonara",
           price: 120,
-          description: "Creamy sauce with pancetta",
+          description:
+            " Pasta carbonara topped with flaky salt in a bowl with a fork made with spaghetti, egg yolks, Pecorino Romano and guanciale.",
           image:
             "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         },
@@ -172,7 +186,8 @@ export const FoodMenu = () => {
           id: 7,
           name: "Beef Burger",
           price: 130,
-          description: "Angus beef with cheese",
+          description:
+            "A burger is a patty of ground beef grilled and placed between two halves of a bun. Slices of raw onion, lettuce, bacon, mayonnaise, and other ingredients add flavor. Burgers are considered an American food but are popular around the world.",
           image:
             "https://images.unsplash.com/photo-1561758033-48d52648ae8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
         },
@@ -180,7 +195,8 @@ export const FoodMenu = () => {
           id: 8,
           name: "Grilled Salmon",
           price: 145,
-          description: "With lemon butter sauce",
+          description:
+            "Glaze succulent salmon fillets in miso, balsamic vinegar and soy, then serve on a bed of noodles and beansprouts for an easy and quick .",
           image:
             "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         },
@@ -196,7 +212,8 @@ export const FoodMenu = () => {
           id: 1,
           name: "Chicken Burger",
           price: 115,
-          description: "Ipsum ipsum clita erat amet dolor justo diam",
+          description:
+            "Chicken burger recipes · Sriracha-glazed chicken burger & pickled cabbage · Caesar brussels slaw & parmesan chicken schnitzel burgers.",
           image:
             "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80",
         },
@@ -204,7 +221,8 @@ export const FoodMenu = () => {
           id: 2,
           name: "Filet Mignon",
           price: 195,
-          description: "8oz tender beef cut",
+          description:
+            "Filet mignon is usually presented as a round cut taken from the thinner end of a piece of tenderloin. It is often the most tender and lean cut.",
           image:
             "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         },
@@ -212,7 +230,8 @@ export const FoodMenu = () => {
           id: 3,
           name: "Lobster Risotto",
           price: 175,
-          description: "Creamy arborio rice with lobster",
+          description:
+            "This delicious and decadent Lobster Risotto is made with chunks of lobster and cherry tomatoes in a sherry wine sauce.",
           image:
             "https://images.unsplash.com/photo-1600628421060-939639517883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         },
@@ -220,7 +239,8 @@ export const FoodMenu = () => {
           id: 4,
           name: "Duck Confit",
           price: 165,
-          description: "Slow cooked duck leg",
+          description:
+            "Duck confit is a French dish made with whole duck. In Gascony, according to the families perpetuating the tradition of duck confit, all the pieces of duck .",
           image:
             "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         },
@@ -228,15 +248,17 @@ export const FoodMenu = () => {
           id: 5,
           name: "Mushroom Ravioli",
           price: 135,
-          description: "Homemade pasta with truffle",
+          description:
+            "A quick cheese ravioli with buttery, balsamic caramelized mushrooms, and fresh garden herbs. When you're in need of an easy, 30 minute dinner.",
           image:
-            "https://images.unsplash.com/photo-1608212589631-1236b6287dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            "https://thecozycook.com/wp-content/uploads/2022/05/Mushroom-Ravioli-Sauce-f.jpg",
         },
         {
           id: 6,
           name: "Rack of Lamb",
           price: 185,
-          description: "Herb crusted with mint jelly",
+          description:
+            "Rack of lamb is so elegant. Season rack of lamb with rosemary, thyme, and garlic, then slather with olive oil and roast in the oven.",
           image:
             "https://images.unsplash.com/photo-1602253057119-44d745d9b860?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1526&q=80",
         },
@@ -244,7 +266,8 @@ export const FoodMenu = () => {
           id: 7,
           name: "Seafood Paella",
           price: 155,
-          description: "Spanish rice with mixed seafood",
+          description:
+            "This Seafood Paella recipe is packed with shrimp, calamari, mussels and delicious flavors and makes a fantastic, impressive dinner.",
           image:
             "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         },
@@ -252,7 +275,8 @@ export const FoodMenu = () => {
           id: 8,
           name: "Vegetable Curry",
           price: 125,
-          description: "Spicy coconut milk curry",
+          description:
+            "An easy veggie curry that makes a cheap and healthy meal. It uses basic store cupboard ingredients so is very quick and easy to cook.",
           image:
             "https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         },
@@ -525,12 +549,14 @@ export const FoodMenu = () => {
               </ListItem>
               <ListItem>
                 <ListItemText primary="Shipping" />
-                <Typography variant="subtitle1">${(calculateTotal()/100)}</Typography>
+                <Typography variant="subtitle1">
+                  ${calculateTotal() / 100}
+                </Typography>
               </ListItem>
               <ListItem>
                 <ListItemText primary="Total" />
                 <Typography variant="h6">
-                  ${(calculateTotal()+(calculateTotal()/100)).toFixed(2)}
+                  ${(calculateTotal() + calculateTotal() / 100).toFixed(2)}
                 </Typography>
               </ListItem>
             </List>
@@ -543,7 +569,8 @@ export const FoodMenu = () => {
               <br />
               at <b className="text-amber-300">{shippingData.address}</b>,{" "}
               {shippingData.city},<br />
-              {shippingData.state}- zipcode: {shippingData.zip}, {shippingData.country}
+              {shippingData.state}- zipcode: {shippingData.zip},{" "}
+              {shippingData.country}
             </Typography>
             <Typography variant="body2" color="textSecondary" mt={1}>
               Payment method: **** **** **** {paymentData.cardNumber.slice(-4)}
@@ -577,8 +604,8 @@ export const FoodMenu = () => {
                   Thank you for your order!
                 </Typography>
                 <Typography variant="body1">
-                  Your order number is {(Math.random()*1000000).toFixed(7)}. We have emailed your order
-                  confirmation.
+                  Your order number is {(Math.random() * 1000000).toFixed(7)}.
+                  We have emailed your order confirmation.
                 </Typography>
                 <Button
                   variant="contained"
@@ -642,13 +669,13 @@ export const FoodMenu = () => {
                 </ListItem>
                 <ListItem sx={{ py: 1 }}>
                   <ListItemText primary="Shipping" />
-                  <Typography>${calculateTotal()/100}</Typography>
+                  <Typography>${calculateTotal() / 100}</Typography>
                 </ListItem>
                 <Divider sx={{ my: 1 }} />
                 <ListItem sx={{ py: 1 }}>
                   <ListItemText primary="Total" />
                   <Typography variant="h6">
-                    ${(calculateTotal()+(calculateTotal()/100)).toFixed(2)}
+                    ${(calculateTotal() + calculateTotal() / 100).toFixed(2)}
                   </Typography>
                 </ListItem>
               </List>
