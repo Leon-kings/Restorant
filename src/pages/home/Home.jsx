@@ -6,6 +6,7 @@ import { FoodMenu } from '../menu/Menu'
 import { Reservation } from '../reservation/Reservation'
 import { Testimonial } from '../testimony/Testimony'
 import { OurTeam } from '../team/Team'
+import { Payment } from '../payment/Payment'
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <div className="w-full">
             <OurTeam/>
         </div>
+        {/* <Payment/> */}
       </div>
     </>
   )
