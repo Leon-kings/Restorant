@@ -475,7 +475,7 @@ export const Hero = ({ onOpenModal }) => {
                   whileHover="hover"
                   whileTap="tap"
                   onClick={() => setShowMenuModal(true)}
-                  className="border-2 border-amber-500 text-amber-500 hover:bg-amber-500/10 font-bold py-4 px-8 rounded-full shadow-lg text-lg flex items-center justify-center space-x-2"
+                  className="border-2 bg-gradient-to-b from-green-400 to-green-600 font-bold py-4 px-8 rounded-full shadow-lg text-lg flex items-center justify-center space-x-2"
                 >
                   <MenuBookIcon />
                   <span>View Menu</span>
@@ -603,7 +603,7 @@ export const Hero = ({ onOpenModal }) => {
                 whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setShowBookingModal(false)}
-                className="absolute top-8 right-8 text-gray-400 hover:text-gray-600 bg-white/90 p-1 rounded-full z-10"
+                className="absolute top-8 right-8 bg-gradient-to-b from-red-500 to-red-700 text-white p-1 rounded-full z-10"
               >
                 <CloseIcon />
               </motion.button>
@@ -811,7 +811,7 @@ export const Hero = ({ onOpenModal }) => {
                 whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setShowContactModal(false)}
-                className="absolute top-8 right-8 text-gray-400 hover:text-gray-600 bg-white/90 p-1 rounded-full z-10"
+                className="absolute top-8 right-8 bg-gradient-to-b from-red-500 to-red-700 text-white p-1 rounded-full z-10"
               >
                 <CloseIcon />
               </motion.button>
@@ -926,7 +926,7 @@ export const Hero = ({ onOpenModal }) => {
                 whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setShowMenuModal(false)}
-                className="absolute top-8 right-8 text-gray-400 hover:text-gray-600 bg-white/90 p-1 rounded-full z-10"
+                className="absolute top-8 right-8 bg-gradient-to-b from-red-500 to-red-700 text-white p-1 rounded-full z-10"
               >
                 <CloseIcon />
               </motion.button>

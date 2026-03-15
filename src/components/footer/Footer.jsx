@@ -624,9 +624,8 @@ export const Footer = () => {
               className="text-gray-400 text-sm flex items-center space-x-1"
             >
               <CopyrightIcon fontSize="small" />
-              <span>
-                {currentYear} Gourmet Restaurant. All rights reserved.
-              </span>
+              <span className="text-white">{currentYear} </span> Gourmet
+              Restaurant. All rights reserved.
             </motion.div>
 
             {/* Footer Links */}
@@ -655,17 +654,6 @@ export const Footer = () => {
                 Sitemap
               </a>
             </motion.div>
-
-            {/* Back to Top */}
-            <motion.button
-              variants={buttonHoverVariants}
-              whileHover="hover"
-              whileTap="tap"
-              onClick={scrollToTop}
-              className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-white transition-colors border border-gray-800"
-            >
-              <ArrowUpwardIcon />
-            </motion.button>
           </div>
         </div>
       </div>
