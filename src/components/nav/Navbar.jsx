@@ -290,8 +290,8 @@ export const Navbar = () => {
     { name: 'HOME', path: '/' },
     { name: 'ABOUT', path: '/about' },
     { name: 'MENU', path: '/menu' },
-    { name: 'GALLERY', path: '/gallery' },
-    { name: 'EVENTS', path: '/events' },
+    { name: 'SERVICES', path: '/services' },
+    { name: 'TESTIMONY', path: '/testimony' },
   ];
 
   // Animation variants
@@ -512,23 +512,25 @@ export const Navbar = () => {
             >
               <AnimatePresence mode="wait">
                 {isMobileMenuOpen ? (
-                  <motion.div
+                  <motion.button
                     key="close"
+                    className="bg-gradient-to-t from-red-500 to-red-700 text-white"
                     initial={{ rotate: -90 }}
                     animate={{ rotate: 0 }}
                     exit={{ rotate: 90 }}
                   >
                     <Close />
-                  </motion.div>
+                  </motion.button>
                 ) : (
-                  <motion.div
+                  <motion.button
                     key="menu"
+                    className="bg-gradient-to-t from-blue-500 to-indigo-400 text-white"
                     initial={{ rotate: 90 }}
                     animate={{ rotate: 0 }}
                     exit={{ rotate: -90 }}
                   >
                     <MenuIcon />
-                  </motion.div>
+                  </motion.button>
                 )}
               </AnimatePresence>
             </motion.button>
@@ -722,7 +724,7 @@ export const Navbar = () => {
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setActiveModal(null)}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 p-1 rounded-full z-10"
+                  className="absolute top-4 right-4 text-white bg-gradient-to-t from-red-500 to-red-700 p-1 rounded-full z-10"
                 >
                   <Close />
                 </motion.button>
@@ -950,7 +952,7 @@ export const Navbar = () => {
                     setShowForgotPassword(false);
                     setActiveModal(null);
                   }}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 p-1 rounded-full z-10"
+                  className="absolute top-4 right-4 bg-gradient-to-t from-red-500 to-red-700 text-white p-1 rounded-full z-10"
                 >
                   <Close />
                 </motion.button>
@@ -1097,7 +1099,7 @@ export const Navbar = () => {
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setActiveModal(null)}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 p-1 rounded-full z-10"
+                  className="absolute top-4 right-4 bg-gradient-to-t from-red-500 to-red-700 text-white p-1 rounded-full z-10"
                 >
                   <Close />
                 </motion.button>
@@ -1235,7 +1237,7 @@ export const Navbar = () => {
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setActiveModal(null)}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 p-1 rounded-full z-10"
+                  className="absolute top-4 right-4 bg-gradient-to-t from-red-500 to-red-700 text-white p-1 rounded-full z-10"
                 >
                   <Close />
                 </motion.button>

@@ -1569,7 +1569,7 @@ export const FoodMenu = () => {
                             whileHover="hover"
                             whileTap="tap"
                             onClick={() => addToCart(item)}
-                            className="text-amber-500 hover:text-amber-400 text-sm font-medium flex items-center space-x-1"
+                            className="bg-gradient-to-t from-blue-500 to-indigo-500 text-sm font-medium flex items-center space-x-1"
                           >
                             <AddIcon fontSize="small" />
                             <span>Add to Cart</span>
@@ -1595,7 +1595,7 @@ export const FoodMenu = () => {
                   </motion.button>
                   
                   {[...Array(totalPages(category.items))].map((_, i) => (
-                    <motion.button
+                    <motion.div
                       key={`page-${i + 1}`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -1607,7 +1607,7 @@ export const FoodMenu = () => {
                       }`}
                     >
                       {i + 1}
-                    </motion.button>
+                    </motion.div>
                   ))}
                   
                   <motion.button
@@ -1655,7 +1655,7 @@ export const FoodMenu = () => {
                     whileHover={{ scale: 1.1, rotate: 90 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setShowCartModal(false)}
-                    className="text-gray-400 hover:text-white"
+                    className="bg-gradient-to-t from-red-500 to-red-700 text-white"
                   >
                     <CloseIcon />
                   </motion.button>
@@ -1700,7 +1700,7 @@ export const FoodMenu = () => {
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                              className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center text-white"
+                              className="w-8 h-8 bg-gradient-to-t from-red-500 to-red-300 rounded-full flex items-center justify-center text-white"
                             >
                               <RemoveIcon fontSize="small" />
                             </motion.button>
@@ -1709,7 +1709,7 @@ export const FoodMenu = () => {
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                               onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                              className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center text-white"
+                              className="w-8 h-8 bg-gradient-to-t from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white"
                             >
                               <AddIcon fontSize="small" />
                             </motion.button>
@@ -1718,7 +1718,7 @@ export const FoodMenu = () => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={() => removeFromCart(item.id)}
-                            className="text-red-500 hover:text-red-400"
+                            className="bg-gradient-to-t from-red-500 to-red-700 text-white"
                           >
                             <DeleteIcon />
                           </motion.button>
@@ -1740,7 +1740,7 @@ export const FoodMenu = () => {
                           whileHover="hover"
                           whileTap="tap"
                           onClick={() => setShowCartModal(false)}
-                          className="py-3 border border-gray-700 text-white rounded-lg hover:bg-gray-800"
+                          className="py-3 border bg-gradient-to-t from-blue-500 to-indigo-700 text-white rounded-lg "
                         >
                           Continue Shopping
                         </motion.button>
@@ -1795,7 +1795,7 @@ export const FoodMenu = () => {
                     whileHover={{ scale: 1.1, rotate: 90 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setShowCheckoutModal(false)}
-                    className="text-gray-400 hover:text-white"
+                    className="bg-gradient-to-t from-red-500 to-red-700 text-white"
                   >
                     <CloseIcon />
                   </motion.button>
@@ -2088,7 +2088,7 @@ export const FoodMenu = () => {
                             whileHover="hover"
                             whileTap="tap"
                             onClick={handleBack}
-                            className="flex-1 py-2 border border-gray-700 text-white rounded-lg text-sm"
+                            className="flex-1 py-2 border bg-gradient-to-t from-blue-500 to-indigo-700 text-white rounded-lg text-sm"
                           >
                             Back
                           </motion.button>

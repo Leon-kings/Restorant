@@ -503,46 +503,6 @@ export const Testimonial = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-
-            {/* Navigation Buttons */}
-            <div className="flex justify-center mt-8 space-x-4">
-              <motion.button
-                variants={buttonHoverVariants}
-                whileHover="hover"
-                whileTap="tap"
-                onClick={handlePrevious}
-                className="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-amber-500 transition-colors border border-gray-700"
-              >
-                <ArrowBackIcon />
-              </motion.button>
-              <motion.button
-                variants={buttonHoverVariants}
-                whileHover="hover"
-                whileTap="tap"
-                onClick={handleNext}
-                className="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-amber-500 transition-colors border border-gray-700"
-              >
-                <ArrowForwardIcon />
-              </motion.button>
-            </div>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {testimonials.map((_, index) => (
-                <motion.button
-                  key={index}
-                  variants={buttonHoverVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                  onClick={() => handleDotClick(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'w-8 bg-amber-500'
-                      : 'w-2 bg-gray-600 hover:bg-gray-500'
-                  }`}
-                />
-              ))}
-            </div>
           </div>
 
           {/* Stats Section */}
