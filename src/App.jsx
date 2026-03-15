@@ -1,17 +1,15 @@
 import React from "react";
 import "./App.css";
-import { Loading } from "./components/loading/Loading";
 import { Navbar } from "./components/nav/Navbar";
 import { Services } from "./pages/services/Services";
 import { About } from "./pages/about/About";
 import { FoodMenu } from "./pages/menu/Menu";
 import { Reservation } from "./pages/reservation/Reservation";
-import Hero from "./components/hero/Hero";
 import { Testimonial } from "./pages/testimony/Testimony";
 import { OurTeam } from "./pages/team/Team";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
-import Footer from "./components/footer/Footer";
+import { Footer } from "./components/footer/Footer";
 
 export default function App() {
   return (
